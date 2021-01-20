@@ -10,10 +10,15 @@
         <nav>
             <div class="wrapper">
                 <div class="logo"><a href="">Contratou!</a></div>
+                <input type="radio" name="slide" id="botao-menu">
+                <input type="radio" name="slide" id="botao-cancelar">
                 <ul class="navbar">
+                    <label for="botao-cancelar" class="botao cancelar"><i class="fas fa-times"></i></label>
                     <li><a href="index.html">Home</a></li>
                     <li>
-                        <a href="servicos.html">Serviços</a>
+                        <a href="#" class="desktop">Serviços</a>
+                        <input type="checkbox" id="mostrarDropdown">
+                        <label for="mostrarDropdown" class="mobile">Serviços</label>
                         <div class="servicos-menu">
                             <div class="conteudo">
                                 <div class="linha">
@@ -54,11 +59,9 @@
                     <li><a href="login_contratante.html">Quero contratar</a></li>
                     <li><a href="login_contratado.html">Quero ser um profissional</a></li>
                 </ul>
+                <label for="botao-menu" class="botao menu"><i class="fas fa-bars"></i></label>
             </div>
         </nav>
-
-
-
 
 
 

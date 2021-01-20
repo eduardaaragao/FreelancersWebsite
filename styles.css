@@ -7,7 +7,7 @@
 body{
   background: white;
 }
-/*COMEÇA AQUI*/
+/*--- <Estilos do menu de navegação> ---*/
 nav{
   background: #1b1b1b;
   position: fixed;
@@ -37,6 +37,21 @@ nav .wrapper{
   font-weight: 600;
 }
 
+.wrapper .botao{
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.wrapper .botao.cancelar{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+.wrapper input{display: none;}
+
 .navbar li{
   list-style: none;
 }
@@ -61,6 +76,24 @@ nav .wrapper{
   visibility: visible;
   transition: all 0.3s ease;
 }
+.navbar .desktop{
+  display: none;
+}
+
+.navbar .mobile{
+  display: block;
+  font-size: 20px;
+  color: #f2f2f2;
+  font-weight: 500;
+  padding-left: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar .mobile:hover{
+  background: #3A3B3C;
+}
 
 .servicos-menu{
   position: absolute;
@@ -69,6 +102,8 @@ nav .wrapper{
   left: 0;
   opacity: 0;
   visibility: hidden;
+  padding: 0 30px;
+  transition: all 0.3s ease;
 }
 
 .servicos-menu .conteudo{
@@ -100,6 +135,7 @@ nav .wrapper{
 .conteudo .linha:nth-child(2){
   border-left: 0px;
 }
+
 .conteudo .linha .links{
   border-left: 1px solid rgba(255,255,255,0.09);
   margin-left: -40px;
@@ -114,7 +150,101 @@ nav .wrapper{
   font-size: 17px;
   display: block;
 }
-/*ends here*/
+/*--- </Estilos do menu de navegação> ---*/
+
+/* <Parte responsiva>*/
+@media screen and (max-width: 970px){
+  .wrapper .botao{
+    display: block;
+  }
+  .wrapper .navbar{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    background-color: #1b1b1b;
+    display: block;
+    overflow-y: auto;
+    top: 0;
+    left: -100%;
+    line-height: 50px;
+    padding: 50px 10px;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  }
+  #botao-menu:checked ~ botao.menu{
+    display: none;
+  }
+  #botao-menu:checked ~ .navbar{
+    left: 0%;
+  }
+  #mostrarDropdown:checked ~.servicos-menu{
+    max-height: 100%;
+  }
+  .links .desktop{
+    display: none;
+  }
+  .links .mobile{
+    display: block;
+    font-size: 20px;
+    color: #f2f2f2;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3 ease;
+  }
+  .navbar .links li{
+    margin: 15px 10px;
+  }
+  .navbar .links li:hover{
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .navbar::-webkit-scrollbar{
+    width: 0px;
+  }
+  .servicos-menu{
+    position: static;
+    top: 65px;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .servicos-menu .conteudo{
+    background: #1b1b1b;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .servicos-menu .conteudo .linha{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+  }
+  .servicos-menu .conteudo .linha:nth-child(1),
+  .servicos-menu .conteudo .linha:nth-child(2){
+    border-top: 0px;
+  }
+
+  .conteudo .linha .links{
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .linha .links li{
+    margin: 0;
+  }
+  .conteudo .linha header{
+    font-size: 19px;
+  }
+}
+
+/*</Parte Resposiva>*/
 
 
 .content{
