@@ -1,0 +1,187 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Product Sans', sans-serif;
+}
+body{
+  background: white;
+}
+/*COMEÇA AQUI*/
+nav{
+  background: #1b1b1b;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  height: 65px;
+  line-height: 65px;
+}
+nav .wrapper{
+  position: relative;
+  max-width: 1250px;
+  padding: 0 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper .navbar{
+  display: inline-flex;
+}
+
+.wrapper .logo a{
+  color: white;
+  text-decoration: none;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.navbar li{
+  list-style: none;
+}
+
+.navbar li a{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar li a:hover{
+  background: #717171;
+}
+
+.navbar li:hover .servicos-menu{
+  top: 65px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.servicos-menu{
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.servicos-menu .conteudo{
+  background: #1b1b1b;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.conteudo .linha{
+  width: calc(25% - 30px);
+  line-height: 45px;
+}
+
+.conteudo .linha img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo .linha header{
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.conteudo .linha:nth-child(1),
+.conteudo .linha:nth-child(2){
+  border-left: 0px;
+}
+.conteudo .linha .links{
+  border-left: 1px solid rgba(255,255,255,0.09);
+  margin-left: -40px;
+}
+
+.linha .links li{
+  padding: 0 20px;
+}
+.linha .links li a{
+  padding: 0 20px;
+  color: white;
+  font-size: 17px;
+  display: block;
+}
+/*ends here*/
+
+
+.content{
+  text-align: left;
+  width: 100%;
+}
+
+/* Slideshow container */
+.slide-show {
+  width: 50%;
+  text-align: left;
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Caption text */
+.texto {
+  color:  #1b1b1b ;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.pontos{
+  width: 50%;
+  text-align: center;
+}
+/* Indicadores de pontos do carrossel */
+.ponto {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .ponto:hover {
+  background-color: #717171;
+}
+
+#myH1{
+  float: right;
+  text-align: right;
+}
+
+/* Animação fade para carrossel */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
