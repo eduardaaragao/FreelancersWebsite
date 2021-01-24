@@ -1,7 +1,6 @@
 {
   "name": "testereact",
   "version": "1.0.0",
-  "description": "",
   "main": "formulario.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +11,15 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardaaragao/FreelancersWebsite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eduardaaragao/FreelancersWebsite/issues"
+  },
+  "homepage": "https://github.com/eduardaaragao/FreelancersWebsite#readme",
+  "description": ""
 }

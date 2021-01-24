@@ -36,5 +36,5 @@ class FlavorForm extends React.Component {
 
   ReactDOM.render(
     <FlavorForm />,
-    document.getElementById('myForm')
+    document.getElementById('form')
   );

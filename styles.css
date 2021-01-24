@@ -61,7 +61,7 @@ nav .wrapper{
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  padding: 9px 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
@@ -76,23 +76,9 @@ nav .wrapper{
   visibility: visible;
   transition: all 0.3s ease;
 }
-.navbar .desktop{
-  display: none;
-}
 
 .navbar .mobile{
-  display: block;
-  font-size: 20px;
-  color: #f2f2f2;
-  font-weight: 500;
-  padding-left: 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.navbar .mobile:hover{
-  background: #3A3B3C;
+  display: none;
 }
 
 .servicos-menu{
@@ -153,7 +139,11 @@ nav .wrapper{
 /*--- </Estilos do menu de navegação> ---*/
 
 /* <Parte responsiva>*/
-@media screen and (max-width: 970px){
+@media screen and (max-width: 970px) {
+  .areaTextos .botao-contratar{
+    background: yellow;
+  }
+
   .wrapper .botao{
     display: block;
   }
@@ -162,53 +152,65 @@ nav .wrapper{
     height: 100vh;
     width: 100%;
     max-width: 350px;
-    background-color: #1b1b1b;
-    display: block;
-    overflow-y: auto;
     top: 0;
     left: -100%;
-    line-height: 50px;
+    background: #242526;
+    display: block;
     padding: 50px 10px;
-    box-shadow: 0 15px 15px rgba(0,0,0,0.15);
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
     transition: all 0.3s ease;
   }
-  #botao-menu:checked ~ botao.menu{
-    display: none;
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A3B3C;
   }
   #botao-menu:checked ~ .navbar{
     left: 0%;
   }
-  #mostrarDropdown:checked ~.servicos-menu{
-    max-height: 100%;
-  }
-  .links .desktop{
+  #botao-menu:checked ~ .btn.menu-btn{
     display: none;
   }
-  .links .mobile{
+  #botao-cancelar:checked ~ .btn.menu-btn{
     display: block;
-    font-size: 20px;
-    color: #f2f2f2;
-    font-weight: 500;
-    padding-left: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3 ease;
   }
-  .navbar .links li{
+  .navbar li{
     margin: 15px 10px;
   }
-  .navbar .links li:hover{
+  .navbar li a{
     padding: 0 20px;
     display: block;
     font-size: 20px;
   }
-  .navbar::-webkit-scrollbar{
-    width: 0px;
+  #mostrarDropdown:checked ~ .servicos-menu{
+    max-height: 100%;
+  }
+  .navbar .desktop{
+    display: none;
+  }
+  .navbar .mobile{
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .navbar .mobile:hover{
+    background: #3A3B3C;
   }
   .servicos-menu{
     position: static;
     top: 65px;
-    width: 100%;
     opacity: 1;
     visibility: visible;
     padding: 0 20px;
@@ -216,22 +218,20 @@ nav .wrapper{
     overflow: hidden;
     transition: all 0.3s ease;
   }
-  
   .servicos-menu .conteudo{
-    background: #1b1b1b;
+    box-shadow: none;
     flex-direction: column;
     padding: 20px 20px 0 20px;
   }
   .servicos-menu .conteudo .linha{
     width: 100%;
     margin-bottom: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(255,255,255,0.08);
   }
   .servicos-menu .conteudo .linha:nth-child(1),
   .servicos-menu .conteudo .linha:nth-child(2){
     border-top: 0px;
   }
-
   .conteudo .linha .links{
     border-left: 0px;
     padding-left: 15px;
@@ -242,21 +242,28 @@ nav .wrapper{
   .conteudo .linha header{
     font-size: 19px;
   }
+  nav input{
+    display: none;
+  }
+  .slide-show{
+    display: none;
+  }
+  h1{
+    font-size: 20px;
+  }
 }
 
 /*</Parte Resposiva>*/
 
-
 .content{
-  text-align: left;
-  width: 100%;
+  text-align: right;
+  float: right;
+  width: 50%;
 }
 
 /* Slideshow container */
 .slide-show {
-  width: 50%;
-  text-align: left;
-  position: relative;
+  width: 100%;
 }
 
 /* Hide the images by default */
@@ -267,14 +274,10 @@ nav .wrapper{
 .texto {
   color:  #1b1b1b ;
   font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
   text-align: center;
 }
 .pontos{
-  width: 50%;
+  width: 100%;  
   text-align: center;
 }
 /* Indicadores de pontos do carrossel */
@@ -288,14 +291,27 @@ nav .wrapper{
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+.botao-contratar{
+  width: 15%;
+  background: pink;
+  padding: 1%;
+  border-radius: 20px;
+}
 
 .active, .ponto:hover {
   background-color: #717171;
 }
 
-#myH1{
-  float: right;
-  text-align: right;
+.conteudoCentral{
+  padding: 20px;
+}
+
+#areaTextos{
+  position: absolute;
+  overflow: hidden;
+  top: 20%;
+  float: left;
+  overflow: hidden;
 }
 
 /* Animação fade para carrossel */

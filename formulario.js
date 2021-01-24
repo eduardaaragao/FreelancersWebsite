@@ -75,4 +75,4 @@ var FlavorForm = function (_React$Component) {
   return FlavorForm;
 }(React.Component);
 
-ReactDOM.render(React.createElement(FlavorForm, null), document.getElementById('myForm'));
+ReactDOM.render(React.createElement(FlavorForm, null), document.getElementById('form'));
